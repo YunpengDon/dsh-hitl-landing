@@ -332,7 +332,7 @@
             <img data-zh="assets/screenshots/03-subagent-cn.png" data-en="assets/screenshots/03-subagent-en.png" src="assets/screenshots/03-subagent-cn.png"
                  alt="子代理会话决策卡片" width="2360" height="938" loading="lazy">
           </figure>
-          <pre><code><span class="c">// 挂载一个工具，传入调用方 ctx 自动解绑</span>
+          <pre><code><span class="c" data-i18n="code.mount">// 挂载一个工具，传入调用方 ctx 自动解绑</span>
 ctx.hitl.protect(<span class="s">'bash'</span>, {
   title: <span class="s">'Run this command?'</span>,
   countdown: { seconds: 30, action: <span class="s">'reject'</span> },
@@ -350,7 +350,7 @@ ctx.hitl.protect(<span class="s">'bash'</span>, {
         <div class="kick" data-i18n="q.kick">Quickstart</div>
         <h2 data-i18n="q.title">30 秒上手</h2>
       </div>
-      <pre class="install"><code><span class="c">// 安装 dsh-hitl</span>
+      <pre class="install"><code><span class="c" data-i18n="code.install">// 安装 dsh-hitl</span>
 dsh plugin --profile add dsh-hitl</code></pre>
       <div class="steps">
         <div class="step">
@@ -373,7 +373,7 @@ export function apply(ctx) {
   ctx.hitl.protect(<span class="s">'bash'</span>, {
     title: <span class="s">'Confirm?'</span>,
     countdown: { seconds: 30, action: <span class="s">'reject'</span> },
-  }, ctx)  <span class="c">// owner 自动解绑</span>
+  }, ctx)  <span class="c" data-i18n="code.owner">// owner 自动解绑</span>
 }</code></pre>
         </div>
       </div>
@@ -428,7 +428,10 @@ export function apply(ctx) {
     "q.s2t":         {zh:"从代码挂载", en:"Mount from code"},
     "q.s2d":         {zh:"注入 <code>hitl</code> 服务并调用 <code>protect</code>。", en:"Inject the <code>hitl</code> service and call <code>protect</code>."},
     "q.note":        {zh:"装完刷新一次页面即可生效；卸载用 <code>dsh plugin --profile &lt;profile&gt; remove dsh-hitl</code>。", en:"Refresh the page once after installing; uninstall with <code>dsh plugin --profile &lt;profile&gt; remove dsh-hitl</code>."},
-    "foot.top":      {zh:"返回顶部", en:"Back to top"}
+    "foot.top":      {zh:"返回顶部", en:"Back to top"},
+    "code.install":  {zh:"// 安装 dsh-hitl", en:"// Install dsh-hitl"},
+    "code.mount":    {zh:"// 挂载一个工具，传入调用方 ctx 自动解绑", en:"// Mount a tool; pass the calling ctx to auto-unbind"},
+    "code.owner":    {zh:"// owner 自动解绑", en:"// owner auto-unbinds"}
   };
 
   function setLang(lang){
